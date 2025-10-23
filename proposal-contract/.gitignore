@@ -12,3 +12,25 @@ docs/
 
 # Dotenv file
 .env
+.env.*
+!.env.example
+
+# Node
+/node_modules
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Coverage (if generated)
+coverage/
+.nyc_output/
