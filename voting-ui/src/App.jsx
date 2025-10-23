@@ -6,11 +6,12 @@ import { ProposalList } from './components/ProposalList'
 import { EventFeed } from './components/EventFeed'
 import { ChainGuard } from './components/ChainGuard'
 
+import { Footer } from './components/Footer'
 export default function App() {
   const { isConnected } = useAccount()
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen flex flex-col">
       <header className="border-b border-neutral-800/80 backdrop-blur sticky top-0 z-20">
         <div className="container-max py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -24,7 +25,7 @@ export default function App() {
         </div>
       </header>
 
-      <main className="container-max py-8 space-y-8">
+      <main className="container-max py-8 space-y-8 flex-1">
         <ChainGuard />
         {!isConnected ? (
           <div className="card p-6">
@@ -46,9 +47,7 @@ export default function App() {
         )}
       </main>
 
-      <footer className="container-max py-10 text-center text-xs text-neutral-500">
-        Built on Base Sepolia • Smooth minimal UI • Live events
-      </footer>
+      <Footer />
     </div>
   )
 }
